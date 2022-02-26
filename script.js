@@ -32,18 +32,20 @@ pizzaJson.map(function(item, index){
             item.querySelector("span").innerHTML = pizzaJson[chave].sizes[sizeIndex]
         })
         document.querySelector(".pizzaInfo--qt").innerHTML = pizzaqt
-        document.querySelector(".pizzaInfo--qtmenos").addEventListener("click", function(){
-            if(pizzaqt > 1){
-                pizzaqt--
-                document.querySelector(".pizzaInfo--qt").innerHTML = pizzaqt
-            }
-        })
-        document.querySelector(".pizzaInfo--qtmais").addEventListener("click", function(){
-            pizzaqt++
-            document.querySelector(".pizzaInfo--qt").innerHTML = pizzaqt
-        })
+        
     })
     document.querySelector(".pizza-area").append(pizzaitem)
+})
+
+document.querySelector(".pizzaInfo--qtmenos").addEventListener("click", function(){
+    if(pizzaqt > 1){
+        pizzaqt--
+        document.querySelector(".pizzaInfo--qt").innerHTML = pizzaqt
+    }
+})
+document.querySelector(".pizzaInfo--qtmais").addEventListener("click", function(){
+    pizzaqt++
+    document.querySelector(".pizzaInfo--qt").innerHTML = pizzaqt
 })
 
 document.querySelectorAll(".pizzaInfo--size").forEach(function(item){
